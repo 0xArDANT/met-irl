@@ -33,15 +33,15 @@ invariant(CHAINID, "No chain ID env found");
 
 export const EAS_CHAIN_CONFIGS: EASChainConfig[] = [
   {
-    chainId: 11155111,
-    chainName: "sepolia",
-    subdomain: "sepolia.",
-    version: "0.26",
-    contractAddress: "0xC2679fBD37d54388Ce493F1DB75320D236e1815e",
-    schemaRegistryAddress: "0x0a7E2Ff54e76B8E6659aedc9103FB21c038050D0",
-    etherscanURL: "https://sepolia.etherscan.io",
-    contractStartBlock: 2958570,
-    rpcProvider: `https://sepolia.infura.io/v3/`,
+    chainId: 42220,
+    chainName: "celo",
+    subdomain: "celo.",
+    version: "1.3.0",
+    contractAddress: "0x72E1d8ccf5299fb36fEfD8CC4394B8ef7e98Af92",
+    schemaRegistryAddress: "0x5ece93bE4BDCF293Ed61FA78698B594F2135AF34",
+    etherscanURL: "https://celoscan.io/",
+    contractStartBlock: 0,
+    rpcProvider: `https://celo-mainnet.infura.io/v3/`,
   },
 ];
 
@@ -58,7 +58,7 @@ export const EASVersion = activeChainConfig.version;
 export const timeFormatString = "MM/DD/YYYY h:mm:ss a";
 export async function getAddressForENS(name: string) {
   const provider = new ethers.JsonRpcProvider(
-    `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_ALCHEMY_API_KEY}`,
+    `https://celo-mainnet.infura.io/v3/${process.env.REACT_APP_ALCHEMY_API_KEY}`,
     "mainnet",
     {
       staticNetwork: new ethers.Network("mainnet", 1),
@@ -69,7 +69,7 @@ export async function getAddressForENS(name: string) {
 }
 export async function getENSName(address: string) {
   const provider = new ethers.JsonRpcProvider(
-    `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_ALCHEMY_API_KEY}`,
+    `https://celo-mainnet.infura.io/v3/${process.env.REACT_APP_ALCHEMY_API_KEY}`,
     "mainnet",
     {
       staticNetwork: new ethers.Network("mainnet", 1),
