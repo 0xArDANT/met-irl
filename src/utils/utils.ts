@@ -41,7 +41,7 @@ export const EAS_CHAIN_CONFIGS: EASChainConfig[] = [
     schemaRegistryAddress: "0x5ece93bE4BDCF293Ed61FA78698B594F2135AF34",
     etherscanURL: "https://celoscan.io/",
     contractStartBlock: 0,
-    rpcProvider: `https://celo-mainnet.infura.io/v3/`,
+    rpcProvider: `https://forno.celo.org`,
   },
   {
     chainId: 11155111,
@@ -52,7 +52,7 @@ export const EAS_CHAIN_CONFIGS: EASChainConfig[] = [
     schemaRegistryAddress: "0x0a7E2Ff54e76B8E6659aedc9103FB21c038050D0",
     etherscanURL: "https://sepolia.etherscan.io",
     contractStartBlock: 2958570,
-    rpcProvider: `https://sepolia.infura.io/v3/`,
+    rpcProvider: `https://eth-sepolia.g.alchemy.com/v2/`,
   },
 ];
 
